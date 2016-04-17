@@ -15,7 +15,7 @@ public class SimpleTest {
     static int test = 0;
     static void doTest(int operations) {
         try {
-            diffProcessor.doProcess(sortedList1, sortedList2);
+             diffProcessor.doProcess(sortedList1, sortedList2);
             if (!sortedList1.equals(sortedList2) || !sortedList1.equals(sortedList2_) || sortedList1.getPerformedOperations() != operations) {
                 System.out.println("Test case: " + ++test + " Failed. Inputs: mustBeEqual: [" + sortedList1_ + "] expected: [" + sortedList2_ + "]");
                 System.out.println("Test case: " + ++test + " Failed. Inputs: mustBeEqual: [" + sortedList1_ + "] expected: [" + sortedList2_ + "]");
