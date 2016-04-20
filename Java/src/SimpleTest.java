@@ -82,5 +82,17 @@ public class SimpleTest {
         Double[] needToBeEqual_7 = { 0.0, 0.0};
         Double[] expected_7 = { 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
         test(needToBeEqual_7, expected_7, 10);
+
+        Double[] needToBeEqual_8 = { 0.0, 0.0, 0.0, 0.0, 2.0 };
+        Double[] expected_8 = { 0.0, 0.1 };
+        test(needToBeEqual_8, expected_8, 5);
+
+        Double[] needToBeEqual_9 = { 1.0, 2.0, 4.0 };
+        Double[] expected_9 = { 0.0, 2.0, 3.0 };
+        test(needToBeEqual_9, expected_9, 4);
+
+        Double[] needToBeEqual_10 = { 0.0, 0.1, 0.2, 0.2, 0.3 };
+        Double[] expected_10 = { 0.0, 0.2, 0.2, 0.3, 0.3 };
+        test(needToBeEqual_10, expected_10, 2);
     }
 }

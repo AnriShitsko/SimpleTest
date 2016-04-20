@@ -54,11 +54,13 @@ public class Processor {
                 // if-block to remove entry if both lists have current entry the last
                 if (modifiedEntry.getNext() == null && expectedEntry.getNext() == null) {
                     mustBeEqualTo.remove(modifiedEntry);
-                    modifiedEntry = mustBeEqualTo.getFirst();
-                    expectedEntry = expectedOutput.getFirst();
-                }
+                    modifiedEntry = mustBeEqualTo.getLast();
+                    expectedEntry = expectedOutput.getLast();
+                    mustBeEqualTo.addLast(expectedEntry.getValue());
 
-                mustBeEqualTo.addBefore(modifiedEntry, expectedEntry.getValue());
+                // else to add entry to the mustBeEqualTo
+                } else
+                    mustBeEqualTo.addBefore(modifiedEntry, expectedEntry.getValue());
 
                 // if-block to remove excess entries if the mustBeEqualTo list have all necessary entries
                 if ((expectedEntry = expectedEntry.getNext()) == null) {
